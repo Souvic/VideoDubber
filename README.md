@@ -27,6 +27,7 @@ Translate your video to languages of your choice in three easy steps:
 ## [VideoDubber.ai](https://videodubber.ai) is supported by:
 ![Google for StartUps](https://upload.wikimedia.org/wikipedia/commons/b/b6/Google_for_Startups_logo.svg "Google for StartUps")
 ![AWS for StartUps](https://www.eban.org/wp-content/uploads/2020/06/aws.png "AWS for StartUps")
+![Microsoft for StartUps](https://blogs.microsoft.com/wp-content/uploads/2018/02/Microsoft-for-Startups.jpg "Microsoft for StartUps")
 
 
 
