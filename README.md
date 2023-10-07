@@ -25,8 +25,8 @@ Translate your video to languages of your choice in three easy steps:
 - You can request us any new feature you need. We are super-accessible unlike other big companies focusing on profit. Our focus is 100% customer satisfaction.
 
 ## [VideoDubber.ai](https://videodubber.ai) is supported by:
-![Google for StartUps](https://upload.wikimedia.org/wikipedia/commons/b/b6/Google_for_Startups_logo.svg =300x200 "Google for StartUps")
-![AWS for StartUps](https://cdn.vidyard.com/thumbnails/38051037/tM4XQrLU2TjatBXhyGKMpA.png =300x200 "AWS for StartUps")
+![Google for StartUps](https://upload.wikimedia.org/wikipedia/commons/b/b6/Google_for_Startups_logo.svg "Google for StartUps")
+![AWS for StartUps](https://www.eban.org/wp-content/uploads/2020/06/aws.png "AWS for StartUps")
 
 
 
