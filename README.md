@@ -24,4 +24,7 @@ Translate your video to languages of your choice in three easy steps:
 - Embed your subtitles, lipsync and edit subtitles in seconds with [VideoDubber.ai](https://videodubber.ai)
 - You can request us any new feature you need. We are super-accessible unlike other big companies focusing on profit. Our focus is 100% customer satisfaction.
 
+## [VideoDubber.ai](https://videodubber.ai) is supported by:
+![Google for StartUps]([[https://assets.digitalocean.com/articles/alligator/boo.svg](https://upload.wikimedia.org/wikipedia/commons/b/b6/Google_for_Startups_logo.svg)](https://upload.wikimedia.org/wikipedia/commons/b/b6/Google_for_Startups_logo.svg) "Google for StartUps")
+
 
