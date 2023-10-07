@@ -1,4 +1,4 @@
-# VideoDubber[https://videodubber.ai]
+# [VideoDubber](https://videodubber.ai)
 ## VideoDubber : AI Video Translation, Text-to-Speech - Try Free
 
 Free AI-powered video translation, dubbing, voice cloning and text-to-speech services. Scale with us to 30+ languages to 10x your audience size effortlessly!
