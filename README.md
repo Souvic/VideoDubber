@@ -13,9 +13,13 @@ Translate your video to languages of your choice in three easy steps:
 - Select the specific voices you want the translated videos to have or choose if you want to clone the original voice.
 - Wait for a few seconds and voila! You will get all your videos translated. You can now download the MP4 files or even the translated subtitles.
 
+## VideoDubber API Usage
+
+Please check the [videodubber_client.md](./videodubber_client.md) file for detailed video translation usage and examples with api keys in python.
+
 ## Why choose [VideoDubber.ai](https://videodubber.ai)?
 
-- We are about 3x [cheaper](https://videodubber.ai/pricing/) than anyone in the market right now and we will remain the cheapest option for premium video translation with AI.
+- We are about 20x [cheaper](https://videodubber.ai/pricing/) than anyone in the market right now and we will remain the cheapest option for premium video translation with AI.
 - Our outputs are far more superior than other competitors. We will soon publish a blog post comparing us with others. Take our word for it till then. Thank us later.
 - We offer free service for short videos. No watermark is added. Test our quality just by creating an account.
 - We offer state of the art voice cloning services for free backed by our own research (no third party API)
