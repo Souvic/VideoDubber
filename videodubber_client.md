@@ -2,7 +2,7 @@
 
 Documentation for the **VideoDubber video translation API** at [https://videodubber.ai/](https://videodubber.ai/) — translate video or audio by submitting a public media URL and polling for the translated output.
 
-Reference implementation: `scripts/videodubber_client.py` (Python CLI and library).
+Reference implementation: [scripts/videodubber_client.py](./scripts/videodubber_client.py) (Python CLI and library).
 
 ---
 
