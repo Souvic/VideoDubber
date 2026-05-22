@@ -3,7 +3,7 @@
 
 Free AI-powered video translation, dubbing, voice cloning and text-to-speech services. Scale with us to 30+ languages to 10x your audience size effortlessly!
 
-We are offering premium video translation 3x [cheaper](https://videodubber.ai/pricing/) than the market.
+We are offering premium video translation 20x [cheaper](https://videodubber.ai/pricing/) than the market.
 
 Translate your video to languages of your choice in three easy steps:
 
