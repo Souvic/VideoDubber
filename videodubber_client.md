@@ -34,13 +34,13 @@ Create a key from the VideoDubber app (API settings), or while logged in via the
 Either pass it on the command line:
 
 ```bash
---api-key "your-uuid-key"
+--api-key "your-api-key"
 ```
 
 Or set an environment variable:
 
 ```bash
-export VIDEODUBBER_API_KEY="your-uuid-key"
+export VIDEODUBBER_API_KEY="your-api-key"
 ```
 
 ---
