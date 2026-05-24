@@ -1,7 +1,7 @@
 {
   "name": "videodubber",
-  "version": "0.2.2",
-  "description": "Official JavaScript/TypeScript client for the VideoDubber.ai video translation API",
+  "version": "0.2.3",
+  "description": "Official JS/TS SDK for VideoDubber.ai — AI video translation, audio dubbing & voice cloning API (150+ languages). Node 18+. Python client also on PyPI.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -15,7 +15,8 @@
     "videodubber": "./dist/cli.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "sync-version": "node scripts/sync-version.mjs",
@@ -26,11 +27,22 @@
     "videodubber",
     "videodubber.ai",
     "video",
+    "video-translation",
     "translation",
     "dubbing",
+    "ai-dubbing",
     "voice-cloning",
+    "text-to-speech",
+    "tts",
+    "subtitle",
+    "localization",
     "api",
-    "api-client"
+    "api-client",
+    "sdk",
+    "nodejs",
+    "typescript",
+    "media",
+    "multilingual"
   ],
   "author": "VideoDubber <contact@videodubber.ai>",
   "license": "GPL-3.0-or-later",
