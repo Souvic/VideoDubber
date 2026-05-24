@@ -1,0 +1,53 @@
+{
+  "name": "videodubber",
+  "version": "0.2.2",
+  "description": "Official JavaScript/TypeScript client for the VideoDubber.ai video translation API",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "videodubber": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "sync-version": "node scripts/sync-version.mjs",
+    "build": "npm run sync-version && tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "videodubber",
+    "videodubber.ai",
+    "video",
+    "translation",
+    "dubbing",
+    "voice-cloning",
+    "api",
+    "api-client"
+  ],
+  "author": "VideoDubber <contact@videodubber.ai>",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Souvic/VideoDubber.git",
+    "directory": "js"
+  },
+  "bugs": {
+    "url": "https://github.com/Souvic/VideoDubber/issues"
+  },
+  "homepage": "https://videodubber.ai/developers/",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "typescript": "^5.8.3"
+  }
+}

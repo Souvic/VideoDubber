@@ -1,8 +1,9 @@
 # VideoDubber — AI Video Translation, Dubbing & Voice Cloning
 
-**Official home of the [VideoDubber](https://videodubber.ai) Python client** — translate, dub, and clone voices in 150+ languages with AI. Premium quality at a fraction of the cost.
+**Official home of the [VideoDubber](https://videodubber.ai) API clients** — translate, dub, and clone voices in 150+ languages with AI. Premium quality at a fraction of the cost.
 
 [![PyPI](https://img.shields.io/pypi/v/videodubber.svg)](https://pypi.org/project/videodubber/)
+[![npm](https://img.shields.io/npm/v/videodubber.svg)](https://www.npmjs.com/package/videodubber)
 [![Python](https://img.shields.io/pypi/pyversions/videodubber.svg)](https://pypi.org/project/videodubber/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 
@@ -10,7 +11,8 @@
 |---|---|
 | **Website** | [videodubber.ai](https://videodubber.ai) |
 | **Developer portal** | [videodubber.ai/developers](https://videodubber.ai/developers/) |
-| **PyPI package** | [pypi.org/project/videodubber](https://pypi.org/project/videodubber/) |
+| **PyPI (Python)** | [pypi.org/project/videodubber](https://pypi.org/project/videodubber/) |
+| **npm (JavaScript)** | [npmjs.com/package/videodubber](https://www.npmjs.com/package/videodubber) |
 | **API reference** | [videodubber_client.md](./videodubber_client.md) |
 | **Pricing** | [videodubber.ai/pricing](https://videodubber.ai/pricing/) |
 
@@ -18,7 +20,9 @@
 
 ## For developers — automate video translation
 
-Use the **official Python client** to submit a public media URL to [`api.videodubber.ai`](https://api.videodubber.ai), poll for completion, and download the translated file — from the CLI or in your own code.
+Use the **official clients** to submit a public media URL to [`api.videodubber.ai`](https://api.videodubber.ai), poll for completion, and download the translated file.
+
+### Python
 
 ```bash
 pip install videodubber
@@ -50,11 +54,45 @@ status = client.translate_from_url(
 print(status.translated_media_url)
 ```
 
+### JavaScript / TypeScript
+
+```bash
+npm install videodubber
+```
+
+```javascript
+import { VideoDubberClient } from "videodubber";
+
+const client = new VideoDubberClient({ apiKey: process.env.VIDEODUBBER_API_KEY });
+const status = await client.translateFromUrl({
+  fileUrl: "https://example.com/video.mp4",
+  targetLanguage: "Spanish",
+  selectedVoices: ["Elvira"],
+  speakers: ["Speaker 1"],
+  filetype: "mp4",
+});
+
+console.log(status.translatedMediaUrl);
+```
+
+CLI (Node.js 18+):
+
+```bash
+export VIDEODUBBER_API_KEY="your-api-key"
+
+npx videodubber \
+  --file-url "https://example.com/video.mp4" \
+  --target-language Spanish \
+  --voice Elvira \
+  --output ./translated.mp4
+```
+
 **Documentation**
 
 - **[Developer portal](https://videodubber.ai/developers/)** — REST quickstart, auth, rate limits, and integration guide
 - **[Full API & CLI reference](./videodubber_client.md)** — endpoints, arguments, error codes, and library methods
-- **[PyPI: videodubber](https://pypi.org/project/videodubber/)** — install, version history, and package metadata
+- **[PyPI: videodubber](https://pypi.org/project/videodubber/)** — Python package
+- **[npm: videodubber](https://www.npmjs.com/package/videodubber)** — JavaScript/TypeScript package
 
 ---
 
@@ -73,6 +111,8 @@ API access is included on [paid plans](https://videodubber.ai/pricing/). Once su
 |--------|-----|
 | Python CLI | `export VIDEODUBBER_API_KEY="your-api-key"` or pass `--api-key "your-api-key"` |
 | Python library | `VideoDubberClient(api_key="your-api-key")` |
+| JavaScript / TypeScript | `new VideoDubberClient({ apiKey: "your-api-key" })` |
+| Node CLI | `export VIDEODUBBER_API_KEY="your-api-key"` or pass `--api-key "your-api-key"` |
 | REST / curl | Add header `x-api-key: your-api-key` on every `/api/p/*` request |
 
 You can also manage keys programmatically while authenticated:
@@ -125,5 +165,6 @@ Download translated MP4s and subtitles in seconds. **Free for short videos, no w
 <p align="center">
   <a href="https://videodubber.ai">Try VideoDubber free</a> ·
   <a href="https://videodubber.ai/developers/">Developer API</a> ·
-  <a href="https://pypi.org/project/videodubber/">PyPI</a>
+  <a href="https://pypi.org/project/videodubber/">PyPI</a> ·
+  <a href="https://www.npmjs.com/package/videodubber">npm</a>
 </p>

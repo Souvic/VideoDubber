@@ -5,34 +5,47 @@ Documentation for the **VideoDubber video translation API** at [videodubber.ai](
 | Resource | Link |
 |----------|------|
 | Developer portal | [videodubber.ai/developers](https://videodubber.ai/developers/) |
-| PyPI package | [pypi.org/project/videodubber](https://pypi.org/project/videodubber/) |
-| Source | [src/videodubber/](./src/videodubber/) |
+| PyPI (Python) | [pypi.org/project/videodubber](https://pypi.org/project/videodubber/) |
+| npm (JavaScript) | [npmjs.com/package/videodubber](https://www.npmjs.com/package/videodubber) |
+| Python source | [src/videodubber/](./src/videodubber/) |
+| JavaScript source | [js/](./js/) |
 
 ---
 
 ## Installation
 
-Install from PyPI:
+### Python
 
 ```bash
 pip install videodubber
 ```
 
-Or install from this repository in editable mode:
+Or from this repository:
 
 ```bash
 pip install -e .
+```
+
+### JavaScript / TypeScript
+
+```bash
+npm install videodubber
+```
+
+Or from this repository:
+
+```bash
+cd js && npm install && npm run build
 ```
 
 ---
 
 ## Requirements
 
-- Python 3.10+
 - A VideoDubber **API key**
 - A **public HTTP(S) URL** to the source media file
-
-(`requests` is installed automatically with the package.)
+- **Python 3.10+** for the Python client (`requests` installed automatically)
+- **Node.js 18+** for the JavaScript client (native `fetch`)
 
 ---
 
@@ -395,6 +408,37 @@ print(status.translated_media_url)
 | `get_job_status(pid)` | Single status check; returns `JobStatus` |
 | `wait_for_job(pid, ...)` | Poll until complete, failed, or timeout |
 | `translate_from_url(params, ...)` | Create + wait (full workflow) |
+| `health()` | `GET /` health check (no rate-limit throttle) |
+
+---
+
+## Using as a JavaScript / TypeScript library
+
+```javascript
+import { VideoDubberClient } from "videodubber";
+
+const client = new VideoDubberClient({ apiKey: "your-uuid-key" });
+
+const status = await client.translateFromUrl({
+  fileUrl: "https://example.com/video.mp4",
+  targetLanguage: "Spanish",
+  originalLanguage: "English",
+  selectedVoices: ["Elvira"],
+  speakers: ["Speaker 1"],
+  filetype: "mp4",
+}, { pollInterval: 15, maxWait: 3600 });
+
+console.log(status.translatedMediaUrl);
+```
+
+### Library methods (JavaScript)
+
+| Method | Description |
+|--------|-------------|
+| `createJobFromUrl(params)` | Submit job only; returns `{ pid, status, ... }` |
+| `getJobStatus(pid)` | Single status check; returns `JobStatus` |
+| `waitForJob(pid, ...)` | Poll until complete, failed, or timeout |
+| `translateFromUrl(params, ...)` | Create + wait (full workflow) |
 | `health()` | `GET /` health check (no rate-limit throttle) |
 
 ---

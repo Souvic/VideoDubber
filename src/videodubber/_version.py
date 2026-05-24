@@ -1,3 +1,5 @@
-"""Single source of truth for the package version."""
+"""Single source of truth for the package version (see repo root VERSION)."""
 
-__version__ = "0.2.2"
+from pathlib import Path
+
+__version__ = (Path(__file__).resolve().parents[2] / "VERSION").read_text(encoding="utf-8").strip()

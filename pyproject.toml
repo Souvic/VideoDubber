@@ -43,7 +43,8 @@ Changelog = "https://pypi.org/project/videodubber/#history"
 videodubber = "videodubber.cli:main"
 
 [tool.hatch.version]
-path = "src/videodubber/_version.py"
+path = "VERSION"
+pattern = "(?P<version>.*)"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/videodubber"]
@@ -53,5 +54,6 @@ include = [
     "/src",
     "/LICENSE",
     "/README.md",
+    "/VERSION",
     "/videodubber_client.md",
 ]
