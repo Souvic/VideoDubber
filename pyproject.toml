@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "videodubber"
-version = "0.1.2"
+dynamic = ["version"]
 description = "Official Python client for the VideoDubber.ai video translation API"
 readme = "README.md"
 license = "GPL-3.0-or-later"
@@ -41,6 +41,9 @@ Changelog = "https://pypi.org/project/videodubber/#history"
 
 [project.scripts]
 videodubber = "videodubber.cli:main"
+
+[tool.hatch.version]
+path = "src/videodubber/_version.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/videodubber"]
