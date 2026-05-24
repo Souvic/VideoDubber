@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "videodubber"
-version = "0.1.0"
+version = "0.1.2"
 description = "Official Python client for the VideoDubber.ai video translation API"
 readme = "README.md"
 license = "GPL-3.0-or-later"

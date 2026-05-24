@@ -113,11 +113,11 @@ Download translated MP4s and subtitles in seconds. **Free for short videos, no w
 ## Supported by
 
 <p align="center">
-  <img src="./assets/supported-by/google-for-startups.svg" alt="Google for Startups" height="48"/>
+  <img src="https://raw.githubusercontent.com/Souvic/VideoDubber/main/assets/supported-by/google-for-startups.svg" alt="Google for Startups" height="48"/>
   &nbsp;&nbsp;
-  <img src="./assets/supported-by/aws.webp" alt="AWS for Startups" height="48"/>
+  <img src="https://raw.githubusercontent.com/Souvic/VideoDubber/main/assets/supported-by/aws.webp" alt="AWS for Startups" height="48"/>
   &nbsp;&nbsp;
-  <img src="./assets/supported-by/microsoft-for-startups.jpg" alt="Microsoft for Startups" height="48"/>
+  <img src="https://raw.githubusercontent.com/Souvic/VideoDubber/main/assets/supported-by/microsoft-for-startups.jpg" alt="Microsoft for Startups" height="48"/>
 </p>
 
 ---

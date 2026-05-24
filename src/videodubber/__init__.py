@@ -22,4 +22,4 @@ __all__ = [
     "format_api_error",
 ]
 
-__version__ = "0.1.0"
+__version__ = "0.1.2"
