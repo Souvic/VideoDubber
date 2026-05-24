@@ -1,17 +1,38 @@
 # VideoDubber API Client
 
-Documentation for the **VideoDubber video translation API** at [https://videodubber.ai/](https://videodubber.ai/) — translate video or audio by submitting a public media URL and polling for the translated output.
+Documentation for the **VideoDubber video translation API** at [videodubber.ai](https://videodubber.ai/) — translate video or audio by submitting a public media URL and polling for the translated output.
 
-**Reference implementation:** [scripts/videodubber_client.py](./scripts/videodubber_client.py) (Python CLI and library).
+| Resource | Link |
+|----------|------|
+| Developer portal | [videodubber.ai/developers](https://videodubber.ai/developers/) |
+| PyPI package | [pypi.org/project/videodubber](https://pypi.org/project/videodubber/) |
+| Source | [src/videodubber/](./src/videodubber/) |
+
+---
+
+## Installation
+
+Install from PyPI:
+
+```bash
+pip install videodubber
+```
+
+Or install from this repository in editable mode:
+
+```bash
+pip install -e .
+```
 
 ---
 
 ## Requirements
 
 - Python 3.10+
-- The `requests` package
 - A VideoDubber **API key**
 - A **public HTTP(S) URL** to the source media file
+
+(`requests` is installed automatically with the package.)
 
 ---
 
@@ -49,7 +70,7 @@ export VIDEODUBBER_API_KEY="your-api-key"
 
 ```mermaid
 sequenceDiagram
-    participant Client as videodubber_client.py
+    participant Client as videodubber
     participant API as api.videodubber.ai
 
     Client->>API: POST /api/p/jobs (file_url, languages, voices, ...)
@@ -187,7 +208,7 @@ The URL must point directly to the media file (e.g. a signed S3/GCS link or dire
 ```bash
 export VIDEODUBBER_API_KEY="your-uuid-key"
 
-python scripts/videodubber_client.py \
+videodubber \
     --file-url "https://example.com/video.mp4" \
     --original-language English \
     --target-language Spanish \
@@ -198,7 +219,7 @@ python scripts/videodubber_client.py \
 ### Multiple speakers
 
 ```bash
-python scripts/videodubber_client.py \
+videodubber \
     --file-url "https://example.com/interview.mp4" \
     --target-language French \
     --num-speakers 2 \
@@ -211,7 +232,7 @@ python scripts/videodubber_client.py \
 ### JSON output (for automation)
 
 ```bash
-python scripts/videodubber_client.py \
+videodubber \
     --file-url "https://example.com/video.mp4" \
     --target-language German \
     --voice Katja \
@@ -330,10 +351,10 @@ Use `--debug` while polling if you need the full raw status payload.
 
 ## Using as a Python library
 
-Import the client and dataclasses from the script:
+Import the client and dataclasses from the installed package:
 
 ```python
-from videodubber_client import (
+from videodubber import (
     VideoDubberClient,
     TranslationJobParams,
 )
