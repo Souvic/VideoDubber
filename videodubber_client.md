@@ -40,9 +40,20 @@ pip install -e .
 
 Every API request must include your API key in the `x-api-key` header.
 
-### Getting an API key
+## How to Generate VideoDubber API Key
 
-Create a key from the VideoDubber app (API settings), or while logged in via the session endpoints:
+API access requires a [paid plan](https://videodubber.ai/pricing/) with API enabled.
+
+### In the VideoDubber app
+
+1. Log in at [app.videodubber.ai](https://app.videodubber.ai/)
+2. Go to **API Keys** in your account dashboard
+3. Click **Generate API key**
+4. Copy and save the key — treat it like a password and do not share it publicly
+
+### Via the API (authenticated session)
+
+If you already have a logged-in session, you can manage keys with these endpoints:
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|

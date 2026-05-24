@@ -56,7 +56,34 @@ print(status.translated_media_url)
 - **[Full API & CLI reference](./videodubber_client.md)** — endpoints, arguments, error codes, and library methods
 - **[PyPI: videodubber](https://pypi.org/project/videodubber/)** — install, version history, and package metadata
 
-Get an API key from the [VideoDubber app](https://app.videodubber.ai/) (API settings). API access is available on paid plans — see [pricing](https://videodubber.ai/pricing/).
+---
+
+## How to Generate VideoDubber API Key
+
+API access is included on [paid plans](https://videodubber.ai/pricing/). Once subscribed:
+
+1. **Log in** to [app.videodubber.ai](https://app.videodubber.ai/)
+2. Open **API Keys** in your account
+3. Click **Generate API key** and copy the key immediately — it is shown once
+4. Store the key securely (password manager or secrets vault). Never commit it to git or expose it in browser/client-side code
+
+**Use your key**
+
+| Method | How |
+|--------|-----|
+| Python CLI | `export VIDEODUBBER_API_KEY="your-api-key"` or pass `--api-key "your-api-key"` |
+| Python library | `VideoDubberClient(api_key="your-api-key")` |
+| REST / curl | Add header `x-api-key: your-api-key` on every `/api/p/*` request |
+
+You can also manage keys programmatically while authenticated:
+
+| Action | Endpoint |
+|--------|----------|
+| View existing key | `GET /api/p/api-key` |
+| Generate new key | `POST /api/p/api-key` |
+| Revoke key | `DELETE /api/p/api-key` |
+
+Need help? Email [contact@videodubber.ai](mailto:contact@videodubber.ai) or see the [developer portal](https://videodubber.ai/developers/).
 
 ---
 
